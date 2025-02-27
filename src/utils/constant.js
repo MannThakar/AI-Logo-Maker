@@ -125,4 +125,32 @@ export const FORM_DATA = {
     "Choose a design style that aligns with your vision, or skip to receive a random suggestion.",
   sixthFormTitle: "Select your AI Model Plan",
   sixthFormDescription: "Generate Unlimted Fast Logo with your fav model",
+  pricingOption: [
+    {
+      title: "Free",
+      icon: "/free.png", // Add your free plan icon here
+      description: "Generate unlimited logos for free",
+      features: [
+        "Generate unlimited logos for free",
+        "Longer wait times",
+        "Wait time: 30 seconds to 3 minutes",
+        "Limited Design Options and Quality",
+        "Slow (Not Recommended)",
+      ],
+      button: "Generate Free",
+    },
+    {
+      title: "Premium",
+      description: "Generate unlimited logos for fast",
+      icon: "/thunder.png", // Add your premium plan icon here
+      features: [
+        "Generate unlimited logos",
+        "Shorter wait times",
+        "Wait time: Less than 10 seconds",
+        "Only 5 Credits",
+        "Fast, Inteligent and Reccomended",
+      ],
+      button: "Generate Free",
+    },
+  ],
 };

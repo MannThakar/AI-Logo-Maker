@@ -11,9 +11,8 @@ const LogoColorPalette = ({ handleUserInputChange, parentData }) => {
         formTitle={FORM_DATA.thirdFormTitle}
         formDescription={FORM_DATA.thirdFormDescription}
       />
-
-      <div className="mt-4 grid grid-col-reverse  grid-cols-3 gap-5 justify-items-center w-11/12 mx-auto">
-        {COLOR_PALETTE?.map((individualPalette) => {
+      <div className="mt-4 grid grid-col-reverse  lg:grid-cols-3  lg:gap-5 justify-items-center w-11/12 mx-auto sm:grid-cols-2 sm:w-full sm:gap-4">
+        {COLOR_PALETTE?.map((individualPalette, key) => {
           return (
             <div key={individualPalette.id} className=" w-fit rounded-sm">
               <div
@@ -21,16 +20,14 @@ const LogoColorPalette = ({ handleUserInputChange, parentData }) => {
                   selectedPalette === individualPalette.name &&
                   "outline outline-3 outline-black"
                 }`}
-                key={individualPalette.id}
+                key={key}
               >
                 {individualPalette?.colors?.map((individualColor) => (
                   <div
                     style={{
                       backgroundColor: individualColor,
-                      width: "50px",
-                      height: "100px",
-                      display: "flex",
                     }}
+                    className="lg:w-12 lg:h-24 flex sm:w-8 sm:h-20"
                     onClick={() => {
                       setSelectedPalette(individualPalette.name);
                       handleUserInputChange(individualPalette);

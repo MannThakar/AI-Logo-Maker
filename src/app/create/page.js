@@ -8,6 +8,7 @@ import LogoDescription from "./_components/LogoDescription";
 import LogoColorPalette from "./_components/LogoColorPalette";
 import LogoDesignIdea from "./_components/LogoDesignIdea";
 import LogoSuggestion from "./_components/LogoSuggestion";
+import PricingModel from "./_components/PricingModel";
 const CreateLogo = () => {
   const [steps, setSteps] = useState(1);
   const [formData, setFormData] = useState({});
@@ -24,7 +25,7 @@ const CreateLogo = () => {
       <div className="border border-gray-200 rounded-md p-10 w-3/4 mt-20 mx-auto">
         {steps === 1 ? (
           <Heading
-            handleUserInputChange={(v) => handleForm("title", v)}
+            handleUserInputChange={(value) => handleForm("title", value)}
             parentData={formData}
           />
         ) : steps === 2 ? (
@@ -43,7 +44,12 @@ const CreateLogo = () => {
             parentData={formData}
           />
         ) : steps === 5 ? (
-          <LogoSuggestion parentData={formData} />
+          <LogoSuggestion
+            parentData={formData}
+            handleUserInputChange={(v) => handleForm("suggestion", v)}
+          />
+        ) : steps === 6 ? (
+          <PricingModel parentData={formData} />
         ) : null}
         <div className="flex justify-between">
           {steps != 1 && (
@@ -56,7 +62,7 @@ const CreateLogo = () => {
             </Button>
           )}
 
-          {steps < 5 && (
+          {steps < 6 && (
             <Button className="mt-5 " onClick={() => setSteps(steps + 1)}>
               Next
             </Button>

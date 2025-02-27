@@ -1,4 +1,3 @@
-import { CustomButton } from "@/components/common/Button";
 import Provider from "./Provider";
 import Hero from "@/components/Hero";
 
