@@ -1,12 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { HERO_HEADING } from "../utils/constant";
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import UserDetailsContext from "@/app/_context/UserDetails";
 
 const Hero = () => {
   const [logoName, setLogoName] = useState("");
+  const { userData, setUserData } = useContext(UserDetailsContext);
+
   return (
     <div className="container">
       <div className="mt-20  text-center">

@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-import getFirestore from "firebase/firestore";
+import { getFirestore, initializeFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -15,5 +15,14 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+
+// Initialize Firebase app
 const app = initializeApp(firebaseConfig);
+
+// Initialize Firestore with experimental settings (if needed)
+initializeFirestore(app, {
+  experimentalForceLongPolling: true,
+});
+
+// Firestore instance
 export const db = getFirestore(app);
