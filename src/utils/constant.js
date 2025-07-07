@@ -105,8 +105,6 @@ export const PROMPT = {
     "Generate a text prompt to create Logo for Logo Title/Brand name : {logoTitle},with description: {logoDesc}, with Color combination of {logoColor}, also include the {logoIdea} and include {logoDesign} design idea and Referring to this Logo Prompt:{logoPrompt}  Give me result in JSON portal with prompt field only",
 };
 
-("Based on Logo of type Modern Mascot Logos Generate a text prompt to create Logo for Logo title/Brand name : Indian Restraurant  with decription: Indian food and food related business and refering to prompt: A vibrant logo featuring a friendly, animated character with a playful expression. The character is dressed in a classic uniform, complete with a distinctive accessory that adds personality. In one hand, they hold a signature item that represents the brand, while the other elements of the design—such as small decorative touches or natural accents—enhance the overall look. The background consists of a bold, circular design with subtle accents to highlight the character. Below, the brand name is displayed in bold, stylized lettering, with a slight curve and complementary decorative lines. The overall style is fun, welcoming, and full of character.. Give me 4/5 Suggestion of logo idea (each idea with maximum 4-5 words), Result in JSON format");
-
 export const FORM_DATA = {
   firstFormTitle: "Give your logo a title",
   firstFormDescription:

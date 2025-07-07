@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { FORM_DATA } from "@/utils/constant";
 import Description from "./Description";
 import CustomCard from "@/components/common/CustomCard";
 import { setLocalStorage } from "@/utils/helper";
 import { useUser } from "@clerk/nextjs";
+import UserDetailsContext from "@/app/_context/UserDetails";
 
 const PricingModel = ({ parentData }) => {
   const { user } = useUser();
